@@ -18,13 +18,10 @@ You can find [here](https://doc.powerdns.com/recursor/settings.html) all availab
 
 ### Examples
 
-Recursor server with API enabled:
+Recursor server is use as a front for forwarding private zones to a internal authoritative server or resolve not-exists with external dns server like Google DNS.
 ```
 docker run -d -p 53:53 -p 53:53/udp --name pdns-recursor \
-  -e PDNS_api=yes \
-  -e PDNS_api_key=secret \
-  -e PDNS_webserver=yes \
-  -e PDNS_webserver_address=0.0.0.0 \
-  -e PDNS_webserver_password=secret2 \
-  pschiffe/pdns-recursor
+  -e PDNS_forward_zones=.=172.27.0.11;172.27.0.12;8.8.8.8;8.8.4.4
+  -e PDNS_forward_zones_recurse=.=172.27.0.11;172.27.0.12;8.8.8.8;8.8.4.4
+  xyzxyz442/pdns-recursor
 ```
