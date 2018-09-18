@@ -1,15 +1,15 @@
-FROM alpine:3.7
-MAINTAINER "Peter Schiffer" <pschiffe@redhat.com>
+FROM fedora:27
+LABEL maintainer="Peter Schiffer <pschiffe@redhat.com>"
 
-RUN apk add --no-cache \
+RUN dnf -y --setopt=install_weak_deps=False install \
     pdns-recursor \
-    python3
+  && dnf clean all
 
 RUN pip3 install envtpl \
   && rm -rf ~/.cache/*
 
 RUN mkdir -p /etc/pdns/api.d \
-  && chown -R recursor:recursor /etc/pdns/api.d
+  && chown -R pdns-recursor:pdns-recursor /etc/pdns/api.d
 
 ENV VERSION=4.0 \
   PDNS_setuid=recursor \
