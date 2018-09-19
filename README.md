@@ -1,8 +1,6 @@
 # PowerDNS Recursor Docker Image
 
-[![](https://images.microbadger.com/badges/version/xyzxyz442/docker-pdns-recursor.svg)](https://microbadger.com/images/xyzxyz442/pdns-recursor "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/xyzxyz442/docker-pdns-recursor.svg)](https://microbadger.com/images/xyzxyz442/pdns-recursor "Get your own image badge on microbadger.com")
-
-[![](https://images.microbadger.com/badges/version/xyzxyz442/docker-pdns-recursor:alpine.svg)](https://microbadger.com/images/xyzxyz442/pdns-recursor:alpine "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/xyzxyz442/docker-pdns-recursor:alpine.svg)](https://microbadger.com/images/xyzxyz442/pdns-recursor:alpine "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/xyzxyz442/pdns-recursor.svg)](https://microbadger.com/images/xyzxyz442/pdns-recursor "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/xyzxyz442/pdns-recursor.svg)](https://microbadger.com/images/xyzxyz442/pdns-recursor "Get your own image badge on microbadger.com")
 
 This repository is a splitting `pdns-recursor` subfolder from https://github.com/pschiffe/docker-pdns
 
